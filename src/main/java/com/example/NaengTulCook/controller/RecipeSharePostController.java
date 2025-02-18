@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/recipe-share")
@@ -38,4 +39,5 @@ public class RecipeSharePostController {
     public ResponseEntity<?> getAllPosts(@RequestParam int page, @RequestParam int size) {
         return ResponseEntity.ok(recipeSharePostService.getAllPosts(page, size));
     }
+
 }
